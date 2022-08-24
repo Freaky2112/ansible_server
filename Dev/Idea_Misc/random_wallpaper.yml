@@ -1,0 +1,35 @@
+
+## random pickup wallpaper ...     
+- name: Magic 8 ball for MUDs
+  ansible.builtin.debug:
+    msg: "{{ item }}"
+  with_random_choice:
+     - "Wallpaper/sexy.jpg"
+     - "Wallpaper/metal name.jpg"
+     - "Wallpaper/White.jpg"
+     - "do nothing"
+  register: choice
+
+- name: set ressult to fact
+  with_items:
+    - "{{ item }}" 
+  set_fact: wall: "{{ choice.results[0].item }}"
+
+- name: copy from vars 1
+  copy:
+    src: "{{ wall }}"
+    dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+    owner: root
+    group: root
+
+- name: set wallpaper
+  become_user: freaky
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
+- name: set wallpaper position
+  become_user: freaky
+  dconf:
+    key: "/org/gnome/desktop/background/picture-options"
+    value: "'zoom'"
