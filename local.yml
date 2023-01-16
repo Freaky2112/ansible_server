@@ -8,18 +8,28 @@
       package:
         update_cache: yes
       changed_when: False
-  
-  tasks:
-    - include: tasks/packages.yml
-    - include: tasks/bash.yml
-    - include: tasks/tmux.yml
-    - include: tasks/lesbian.yml
-    - include: tasks/unattended.yml
-    - include: tasks/unattended_upgrades.yml
-    - include: tasks/clock.yml
-    - include: tasks/locale.yml
-    - include: tasks/microcode.yml
-    - include: tasks/upgrade.yml
-    ##- include: Keyboard_layout.yml
+
+  roles:
+    - package
+    - terminal
+    - bash
+    - tmux
+    - lesbian
+    - unattended
+    - unattended_upgrade
+    - wallpaper
+    - clock
+    - locale
+    - microcode
+    - upgrade
+    - discord
+    - favorite
+    # - vscode
+    - snap_install
+    
+    
     ##- include: tasks/cron.yml
-   
+    ### Monero ###
+    #- include: tasks/xmrig.yml
+    #- include: tasks/cron_monero.yml
+    
