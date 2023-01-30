@@ -39,7 +39,7 @@
   become_user: "{{ main_user }}"
   copy:
     src: files/upgrade.sh
-    dest: /usr/local/bin/upgrade
-    owner: root
-    group: root
+    dest: /home/freaky/.local/bin/upgrade
+    owner: freaky
+    group: freaky
     mode: a+x
