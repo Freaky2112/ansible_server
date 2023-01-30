@@ -10,7 +10,7 @@
       changed_when: False
 
   roles:
-    - package
+    #- package
     #- terminal
     - bash
     - tmux
