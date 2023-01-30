@@ -8,6 +8,7 @@
       package:
         update_cache: yes
       changed_when: False
+<<<<<<< HEAD
   
   tasks:
     # - include: tasks/packages.yml
@@ -21,5 +22,30 @@
     - include: tasks/microcode.yml
     - include: tasks/upgrade.yml
     ##- include: Keyboard_layout.yml
+=======
+
+  roles:
+    - package
+    - terminal
+    - bash
+    - tmux
+    - lesbian
+    - unattended
+    - unattended_upgrade
+    - wallpaper
+    - clock
+    - locale
+    - microcode
+    - upgrade
+    - discord
+    - favorite
+    # - vscode
+    - snap_install
+    
+    
+>>>>>>> af6602dc4e84ab4c7305932de78a1c69d9086d82
     ##- include: tasks/cron.yml
-   
+    ### Monero ###
+    #- include: tasks/xmrig.yml
+    #- include: tasks/cron_monero.yml
+    

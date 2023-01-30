@@ -1,0 +1,13 @@
+# Vars for packages to install Dev app for Ubuntu
+
+git_package: git
+perl_package: perl
+zsh_bash: zsh
+
+# Vars for Network  Dev / Trouble Shooting
+
+dns_utils_package: dnsutils
+network_tools: net-tools
+trace_package: traceroute
+network_mapper: nmap
+whois_package: whois

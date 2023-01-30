@@ -1,0 +1,22 @@
+# Vars for packages to install standard app for desktop
+
+cron_package: cron
+dconf_package: dconf-cli
+python_package: python3
+python_pip_package: python3-pip
+python_psutil_package: python3-psutil
+python_virtualenv_package: python3-virtualenv
+rename_package: rename
+sudo_group: sudo
+monitor_system: htop
+mutli_terminal: tmux
+curl_package: curl
+wget_package: wget
+rsync_package: rsync
+git_package: git
+perl_package: perl
+terminal_screen_saver: cmatrix
+network_mapper: nmap
+cdiff: colordiff
+mutli_screen: screen
+ssh_mount: sshfs
