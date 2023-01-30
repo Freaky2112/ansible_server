@@ -19,7 +19,7 @@
     - unattended_upgrade
     #- wallpaper
     - clock
-    - locale
+    # - locale
     - microcode
     - upgrade
     #- discord
