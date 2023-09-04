@@ -12,6 +12,8 @@
 
 Include /etc/ssh/sshd_config.d/*.conf
 
+AllowUsers freaky lesbian
+
 Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
@@ -92,7 +94,7 @@ X11Forwarding yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-PrintMotd yes
+PrintMotd no
 #PrintLastLog yes
 #TCPKeepAlive yes
 #PermitUserEnvironment no
