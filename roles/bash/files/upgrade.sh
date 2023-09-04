@@ -38,9 +38,6 @@ then
 	
 	sudo apt dist-upgrade -y 1>/dev/null 2>>$errorlog
 	checkexit
-	
-	sudo snap refresh 1>/dev/null 2>>$errorlog
-	checkexit
 fi
 
 if [ -d /etc/yum ]
