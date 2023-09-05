@@ -71,6 +71,6 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 fi
 
 if [[ -n $SSH_CONNECTION ]] ; then
-    echo $SSH_CONNECTION >> /tmp/.sshlog.txt
+    echo $SSH_CONNECTION >> /tmp/.ssh_session.log
     echo `date` >> /tmp/.ssh_session.log
 fi
