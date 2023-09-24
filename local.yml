@@ -13,11 +13,11 @@
     #- package
     #- terminal
     - bash
-    - tmux
+    # - tmux
     - lesbian
     - unattended
     - unattended_upgrade
-    #- wallpaper
+    # - wallpaper
     - clock
     # - locale
     - microcode
@@ -25,8 +25,8 @@
     #- discord
     #- favorite
     # - vscode
-    #- snap_install
-    - xmrig
+    # - snap_install
+    # - xmrig
 
     
     ##- include: tasks/cron.yml

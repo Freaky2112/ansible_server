@@ -20,3 +20,5 @@
     alias speed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
     # clean Trash
     alias cleanup="rm -rf $HOME/.local/share/Trash/files/* && rm -rf $HOME/.local/share/info/*"
+    # Clean Screen
+    alias clr="clear"
