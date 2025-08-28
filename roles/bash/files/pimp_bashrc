@@ -67,6 +67,7 @@ if [ "$color_prompt" = yes ]; then
     jb_color='\[\033[0;31m\]'
     cwd_color='\[\033[0;33m\]'
     border_color='\[\033[38;5;208m\]'
+    text_color='\[\033[0;37m\]'
 #    border_color='\[\033[1;34m\]'
 
     prompt_symbol=🎱
@@ -85,7 +86,7 @@ PS1=$border_color'┌───────────────────�
 '-['$job_color'BgJ:'$jb_color'\j'$prompt_color']'\
 '-['$time_color'\t'$prompt_color']'$border_color' │\n'\
 '└─────────────────────────────────────┘\n'\
-$prompt_color'[''\[\033[1;33m\]\w'$prompt_color'] -> '$info_color'\$\[\033[0;37m\] '
+$prompt_color'[''\[\033[1;33m\]\w'$prompt_color']➜ '$info_color'\$\[\033[0;37m\] '
 
     # BackTrack red prompt
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
