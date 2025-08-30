@@ -1,0 +1,90 @@
+>>>>> INSTALL UNATTENDED-UPGRADE <<<<<
+
+
+Ensure the package cache is up to date
+
+>> apt update
+
+Install the unattended-upgrades package
+
+>> apt install unattended-upgrades
+
+>> Enable unattended-upgrades
+
+After installing the package, run this command to enable unattended-upgrades:
+
+>> sudo dpkg-reconfigure --priority=low unattended-upgrades
+
+Check the status of unattended-upgrades
+
+Check the status of the unattended-upgrades service to ensure that it’s enabled and running:
+
+>> systemctl status unattended-upgrades
+
+Start and enable the unattended-upgrades service
+
+>> systemctl enable --now unattended-upgrades
+
+Change into the apt.conf.d directory
+
+>> cd /etc/apt/apt.conf.d
+
+Edit the 20auto-upgrades file
+
+Next, edit the 20auto-upgrades file to ensure that everything is enabled (each option should show 1):
+
+>> nano 20auto-upgrades
+
+Copy 50unattended-upgrades to a new file
+
+Most of the configuration we’ll need can be found in the 50unattended-upgrades file, but it could be overwritten by an update at some point. Instead of editing that file directly, make a copy of it:
+
+>> cp 50unattended-upgrades 99unattended-upgrades
+
+Edit the 99unattended-upgrades file
+
+Considering that 99unattended-upgrades has a higher number than 50unattended-upgrades, it will “override” it. We’ll edit that file to adjust the configuration to meet our needs:
+
+>> nano 99unattended-upgrades
+
+Uncomment those line
+
+>>> Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
+
+>>> Unattended-Upgrade::Remove-Unused-Dependencies "true";
+
+>>> Unattended-Upgrade::Automatic-Reboot "true";
+
+>>> Unattended-Upgrade::Automatic-Reboot-WithUsers "true";
+
+>>> Unattended-Upgrade::Automatic-Reboot-Time "02:00";
+
+Save and Close
+
+Edit the apt-daily-upgrade timer
+
+>> systemctl edit apt-daily-upgrade.timer
+
+>>> [Timer]
+>>> OnCalandar=*-*-* 6:00
+>>> RandomizedDelaySec=10m
+>>> Persistent=true
+
+Save And Close
+
+Reload systemd
+
+>> systemctl daemon-reload
+
+Restart the unattended-upgrades service
+
+
+>> systemctl restart unattended-upgrades
+
+Check the status of unattended-upgrades
+
+>> systemctl status unattended-upgrades
+
+Perform a “Dry Run” to test unattended-upgrades
+
+>> sudo unattended-upgrade --dry-run --debug
