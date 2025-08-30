@@ -9,7 +9,7 @@ Install the unattended-upgrades package
 
 >> apt install unattended-upgrades
 
->> Enable unattended-upgrades
+Enable unattended-upgrades
 
 After installing the package, run this command to enable unattended-upgrades:
 
@@ -66,6 +66,7 @@ Edit the apt-daily-upgrade timer
 >> systemctl edit apt-daily-upgrade.timer
 
 >>> [Timer]
+>>> OnBoot=15m
 >>> OnCalandar=*-*-* 6:00
 >>> RandomizedDelaySec=10m
 >>> Persistent=true
