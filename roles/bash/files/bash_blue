@@ -166,3 +166,7 @@ fi
     alias port="netstat -tulanp"
     # Clear Screen
     alias cls="clear"
+    # cd  ..
+    alias ..='cd ..'
+    # sudo prompt 
+    alias sudo='sudo_random'  
