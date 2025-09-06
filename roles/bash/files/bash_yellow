@@ -147,6 +147,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# $PATH ENVIRONEMENT
+   export PATH="~/.bin:$PATH"
 
 # ## My Aliases ##
 
