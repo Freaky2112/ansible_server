@@ -149,23 +149,7 @@ fi
 
 # $PATH ENVIRONEMENT
    export PATH="~/.bin:$PATH"
-
-# ## My Aliases ##
-
-    # SSH AGENT  Alias
-    # Install essentiel
-    alias fresh="sudo apt update && sudo apt install git curl wget net-tools tmux htop -y"
-    # What is  my ip
-    alias wip="curl icanhazip.com"
-    # Sudo Apt
-    alias apt="sudo apt"
-    # Reboot server with Sudo
-    alias reboot="sudo reboot"
-    # check open port
-    alias port="netstat -tulanp"
-    # Clear Screen
-    alias cls="clear"
-    # cd  ..
-    alias ..='cd ..'
-    # sudo prompt 
-    alias sudo='sudo_random'  
+# Load Aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
