@@ -1,10 +1,9 @@
 # Ansible Server
 
-![License](https://img.shields.io/github/license/Freaky2112/ansible_server)
-![Stars](https://img.shields.io/github/stars/Freaky2112/ansible_server?style=social)
-![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
-![GitHub Issues](https://img.shields.io/github/issues/Freaky2112/ansible_server)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Freaky2112/ansible_server)
+![GitHub issues](https://img.shields.io/github/issues/Freaky2112/Scripts?style=flat-square&color=red) ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Freaky2112/ansible_server)
+
+![GitHub license](https://img.shields.io/github/license/Freaky2112/ansible_server?style=flat-square&color=blue) ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg) ![Stars](https://img.shields.io/github/stars/Freaky2112/ansible_server?style=social)
+
 
 Ansible pull configuration for automated server management and configuration.
 
@@ -198,8 +197,7 @@ Project Link: [https://github.com/Freaky2112/ansible_server](https://github.com/
 ## 📊 Project Status
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Freaky2112/ansible_server)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Freaky2112/ansible_server)
-
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Freaky2112/ansible_server?color=green)
 ---
 
 ⭐ If you find this project useful, please consider giving it a star!
